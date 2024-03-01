@@ -1,7 +1,7 @@
 import "./Header.scss";
-import logo from "../../assets/GREENMIND.svg";
-import Icons from "../molecules/Icons";
-import Navbar from "../molecules/Navbar";
+import logo from "../../../assets/GREENMIND.svg";
+import Icons from "../../molecules/Icons";
+import Navbar from "../../molecules/Navbar";
 
 const Header = () => {
   return (

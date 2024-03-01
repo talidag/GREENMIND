@@ -1,4 +1,4 @@
-@import "../../scss/variables";
+@import "../../../scss/variables";
 
 .navbar {
     &__list {
@@ -27,6 +27,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding-top: 4.4rem;
+    padding-bottom: 4rem;
 }
 
 .icons {

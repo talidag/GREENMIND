@@ -1,10 +1,12 @@
-import Header from "./components/organisms/Header";
+import Header from "./components/organisms/Header/Header";
+import Hero from "./components/organisms/Hero/Hero";
 import "./index.scss";
 
 function App() {
   return (
     <div>
       <Header />
+      <Hero />
     </div>
   );
 }
