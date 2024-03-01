@@ -1,0 +1,47 @@
+@import "../../scss/variables";
+
+.navbar {
+    &__list {
+        display: flex;
+        gap: 4.8rem;
+        list-style: none;
+        font-size: $fs-medium;
+        font-weight: $fw-medium;
+    }
+    &__element {
+        color: $gray;
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+.logo__navbar__wrapper {
+    display: flex;
+    gap: 9.6rem;
+}
+
+header {
+    display: flex;
+    gap: 9.6rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4.4rem;
+}
+
+.icons {
+    &__wrapper {
+        display: flex;
+        gap: 4.8rem;
+        margin-right: 0;
+
+        & a img:hover {
+            filter: invert(49%) sepia(1%) saturate(2408%) hue-rotate(324deg) brightness(103%) contrast(85%);
+        }
+    }
+}
+
+.verticalLine {
+    border-left: 1px solid $black;
+    height: 2.4rem;
+}

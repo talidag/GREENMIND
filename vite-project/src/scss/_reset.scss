@@ -1,0 +1,27 @@
+@import "../scss/typography";
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    cursor: default;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: $poppins;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
