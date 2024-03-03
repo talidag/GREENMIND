@@ -1,9 +1,29 @@
 import "./Header.scss";
-import logo from "../../../assets/GREENMIND.svg";
-import Icons from "../../molecules/Icons";
+import Icon from "../../molecules/Icon";
 import Navbar from "../../molecules/Navbar";
+import logo from "../../../assets/GREENMIND.svg";
+import cart from "../../../assets/Cart.svg";
+import filter from "../../../assets/FilterRight.svg";
+import person from "../../../assets/Person.svg";
 
 const Header = () => {
+  const iconsData = [
+    {
+      img: cart,
+      alt: "Shopping cart icon",
+      link: "",
+    },
+    {
+      img: person,
+      alt: "Person cart icon",
+      link: "",
+    },
+    {
+      img: filter,
+      alt: "Filter cart icon",
+      link: "",
+    },
+  ];
   return (
     <header>
       <div className="logo__navbar__wrapper">
@@ -17,7 +37,11 @@ const Header = () => {
         </div>
       </div>
       <div className="icons__container">
-        <Icons />
+        <div className="icons__wrapper">
+          {iconsData.map((icon, index) => (
+            <Icon key={index} {...icon} />
+          ))}
+        </div>
       </div>
     </header>
   );
