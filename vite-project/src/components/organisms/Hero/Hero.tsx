@@ -5,6 +5,7 @@ import downArrow from "../../../assets/arrow_down.svg";
 import rightArrow from "../../../assets/arrow_right.svg";
 import SpecificationCard from "../../molecules/SpecificationCard";
 import SearchBox from "../../molecules/SearchBox";
+import HeroImg from "../../atoms/HeroImg";
 
 const Hero = () => {
   const title = "Buy your dream plants";
@@ -20,6 +21,29 @@ const Hero = () => {
     },
   ];
 
+  const heroImg = [
+    {
+      img: plant,
+      alt: "Plant",
+      className: "hero__plant",
+    },
+    {
+      img: form,
+      alt: "",
+      className: "hero__form",
+    },
+    {
+      img: downArrow,
+      alt: "",
+      className: "hero__downArrow",
+    },
+    {
+      img: rightArrow,
+      alt: "",
+      className: "hero__rightArrow",
+    },
+  ];
+
   return (
     <main className="hero">
       <div className="hero__left">
@@ -32,10 +56,9 @@ const Hero = () => {
         <SearchBox />
       </div>
       <div className="hero__right">
-        <img src={plant} alt="Plant" className="hero__plant" />
-        <img src={form} alt="" className="hero__form" />
-        <img src={downArrow} alt="" className="hero__downArrow" />
-        <img src={rightArrow} alt="" className="hero__rightArrow" />
+        {heroImg.map((img, index) => (
+          <HeroImg key={index} {...img} />
+        ))}
       </div>
     </main>
   );
