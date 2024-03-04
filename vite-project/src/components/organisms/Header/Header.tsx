@@ -5,32 +5,33 @@ import logo from "../../../assets/GREENMIND.svg";
 import cart from "../../../assets/Cart.svg";
 import filter from "../../../assets/FilterRight.svg";
 import person from "../../../assets/Person.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const iconsData = [
     {
       img: cart,
       alt: "Shopping cart icon",
-      link: "",
+      link: "order",
     },
     {
       img: person,
       alt: "Person cart icon",
-      link: "",
+      link: "profile",
     },
     {
       img: filter,
       alt: "Filter cart icon",
-      link: "",
+      link: "filters",
     },
   ];
   return (
     <header>
       <div className="logo__navbar__wrapper">
         <div className="logo">
-          <a href="">
+          <Link to="/home">
             <img src={logo} alt="GREENMIND logo" />
-          </a>
+          </Link>
         </div>
         <div className="navbar__container">
           <Navbar />
