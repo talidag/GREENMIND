@@ -58,6 +58,10 @@
             width: 100%;
         }
 
+        & label {
+            display: none;
+        }
+
         & input {
             padding: 1.8rem;
             border-radius: 1.2rem;
@@ -68,6 +72,22 @@
 
             &::placeholder {
                 color: $gray;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        & span {
+            position: absolute;
+            bottom: -2.4rem;
+            left: 1rem;
+            color: #ff0000;
+            display: none;
+
+            &.show {
+                display: block;
             }
         }
 
@@ -80,6 +100,7 @@
             border: none;
             border-radius: 1.2rem;
             background-color: $mint;
+            cursor: pointer;
         }
     }
 }
