@@ -16,6 +16,7 @@ function App() {
       <AboutUs />
       <Categories />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
