@@ -3,6 +3,7 @@ import BestSelling from "./components/organisms/BestSelling/BestSelling";
 import Categories from "./components/organisms/Categories/Categories";
 import Header from "./components/organisms/Header/Header";
 import Hero from "./components/organisms/Hero/Hero";
+import Testimonials from "./components/organisms/Testimonials/Testimonials";
 import "./index.scss";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <BestSelling />
       <AboutUs />
       <Categories />
+      <Testimonials />
     </div>
   );
 }
