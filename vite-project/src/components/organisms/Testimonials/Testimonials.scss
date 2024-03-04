@@ -1,0 +1,84 @@
+@import "../../../scss/variables";
+
+.testimonials {
+    padding: 9.6rem 0 23rem 0;
+    margin-right: -9.6rem;
+
+    &__top {
+        display: flex;
+        gap: 70.7rem;
+        align-items: start;
+        margin-right: 9.6rem;
+
+        & img {
+            margin-top: 1.2rem;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        padding-top: 4.8rem;
+        gap: 4.8rem;
+        overflow-x: hidden;
+    }
+
+    &__card {
+        min-width: 80rem;
+        height: 33rem;
+        background-color: $mint;
+        border-radius: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5.4rem;
+        padding: 4.8rem;
+        padding-bottom: 10rem;
+
+        &__top {
+            & p {
+                font-size: 1.8rem;
+                color: #333333;
+                font-weight: $fw-medium;
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        &__left {
+            display: flex;
+            gap: 7.4rem;
+        }
+
+        &__quote {
+            position: relative;
+        }
+
+        &__name {
+            & p {
+                font-size: 1.2rem;
+                color: #1e1e1e80;
+            }
+        }
+
+        &__person {
+            position: absolute;
+            top: -5.9rem;
+            left: -3.2rem;
+        }
+
+        &__rating {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+
+            & p {
+                font-weight: $fw-bold;
+                color: $black;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
