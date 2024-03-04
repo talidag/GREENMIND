@@ -11,8 +11,6 @@ const Button = ({ text, color, link }: ButtonProps) => {
         backgroundColor: color,
         borderRadius: "0.8rem",
         padding: "1.2rem 2.4rem",
-        display: "flex",
-        alignItems: "center",
         gap: "1rem",
         fontSize: "1.8rem",
         fontWeight: "500",

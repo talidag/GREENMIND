@@ -1,0 +1,50 @@
+@import "../../../scss/variables";
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 9.6rem;
+    margin: 0 -9.6rem;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__cards {
+        display: flex;
+        gap: 9.6rem;
+        background-color: $mint;
+        padding: 0 9.6rem 10rem 9.6rem;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        margin-top: -4.8rem;
+
+        & p {
+            text-align: center;
+            display: none;
+        }
+
+        & button {
+            display: none;
+        }
+    }
+
+    &__selected {
+        margin-top: 9.6rem;
+
+        & p {
+            display: block;
+        }
+
+        & button {
+            display: flex;
+        }
+    }
+}
