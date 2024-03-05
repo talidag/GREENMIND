@@ -1,3 +1,5 @@
+import { Link, useLocation } from "react-router-dom";
+
 interface IconProps {
   img: string;
   alt: string;
@@ -5,10 +7,17 @@ interface IconProps {
 }
 
 const Icon = ({ img, alt, link }: IconProps) => {
+  const location = useLocation();
+  console.log(location.pathname);
+  console.log(link);
   return (
-    <a href={link}>
-      <img src={img} alt={alt} />
-    </a>
+    <Link to={link}>
+      <img
+        src={img}
+        alt={alt}
+        className={`/${link}` === location.pathname ? "selected" : ""}
+      />
+    </Link>
   );
 };
 

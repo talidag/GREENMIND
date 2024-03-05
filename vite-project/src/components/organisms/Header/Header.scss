@@ -10,8 +10,14 @@
     }
     &__element {
         color: $gray;
+
         &:hover {
             color: $black;
+        }
+
+        &.selected {
+            color: $black;
+            text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
         }
     }
 }
@@ -37,6 +43,10 @@ header {
         margin-right: 0;
 
         & a img:hover {
+            filter: invert(49%) sepia(1%) saturate(2408%) hue-rotate(324deg) brightness(103%) contrast(85%);
+        }
+
+        & a img.selected {
             filter: invert(49%) sepia(1%) saturate(2408%) hue-rotate(324deg) brightness(103%) contrast(85%);
         }
     }
