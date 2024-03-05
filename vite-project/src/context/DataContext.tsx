@@ -1,49 +1,50 @@
-import { PropsWithChildren, createContext, useState } from "react";
+import { PropsWithChildren, createContext, useEffect, useState } from "react";
+import useAxiosFetch from "../hooks/useAxiosFetch";
 
-interface ShoppingCartType {
+interface PlantType {
+  id: string;
   name: string;
   price: number;
+  img: string;
 }
 
 interface DataContextType {
+  plants: PlantType[];
   popupVisible: boolean;
   setPopupVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  shoppingCart: ShoppingCartType[];
-  setShoppingCart: React.Dispatch<React.SetStateAction<ShoppingCartType[]>>;
-  handleImgClick: (e: { currentTarget: { id: any } }) => void;
+  shoppingCart: {};
+  setShoppingCart: React.Dispatch<React.SetStateAction<{}>>;
 }
 
 const DataContext = createContext<DataContextType>({
+  plants: [],
   popupVisible: false,
   setPopupVisible: () => {},
   shoppingCart: [],
   setShoppingCart: () => {},
-  handleImgClick: () => {},
 });
 
 export const DataProvider = ({ children }: PropsWithChildren<{}>) => {
+  const [plants, setPlants] = useState<PlantType[]>([]);
   const [popupVisible, setPopupVisible] = useState<boolean>(false);
-  const [shoppingCart, setShoppingCart] = useState<ShoppingCartType[]>([]);
+  const [shoppingCart, setShoppingCart] = useState({});
 
-  const handleImgClick = (e: { currentTarget: { id: any } }) => {
-    setPopupVisible(true);
-    const itemToAdd = { name: e.currentTarget.id, price: 200 };
-    // TO DO change the price here. make a database of plants
-    setShoppingCart((prev) => [...prev, itemToAdd]);
+  const { data, fetchError, isLoading } = useAxiosFetch(
+    "http://localhost:3000/plants"
+  );
 
-    setTimeout(() => {
-      setPopupVisible(false);
-    }, 2000);
-  };
+  useEffect(() => {
+    setPlants(data);
+  }, [data]);
 
   return (
     <DataContext.Provider
       value={{
+        plants,
         popupVisible,
         setPopupVisible,
         shoppingCart,
         setShoppingCart,
-        handleImgClick,
       }}
     >
       {children}

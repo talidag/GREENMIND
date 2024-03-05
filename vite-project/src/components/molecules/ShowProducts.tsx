@@ -1,20 +1,28 @@
-import Subtitle from "../atoms/Subtitle";
+import { useContext } from "react";
+import DataContext from "../../context/DataContext";
 
 interface ShowProductsProps {
-  name: string;
-  price: number;
+  id: string;
+  qty: number | unknown;
 }
 
-const ShowProducts = ({ name, price }: ShowProductsProps) => {
-  // Bring here list of products with prices with context
-  // TO DO!
+const ShowProducts = ({ id, qty }: ShowProductsProps) => {
+  const { plants } = useContext(DataContext);
 
-  // Add if there's one item multiple times Qty: 2
+  const plantToDisplay = plants.find((plant) => plant.id === id);
 
   return (
     <div className="best__popup__product">
-      <p>{name}</p>
-      <span>₱ {price}</span>
+      {plantToDisplay && (
+        <>
+          <div className="best__popup__wrapper">
+            <p>{plantToDisplay.name}</p>
+            <span>x {qty as number}</span>
+          </div>
+
+          <span>₱ {plantToDisplay.price * (qty as number)}</span>
+        </>
+      )}
     </div>
   );
 };

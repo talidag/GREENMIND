@@ -8,8 +8,6 @@ interface IconProps {
 
 const Icon = ({ img, alt, link }: IconProps) => {
   const location = useLocation();
-  console.log(location.pathname);
-  console.log(link);
   return (
     <Link to={link}>
       <img

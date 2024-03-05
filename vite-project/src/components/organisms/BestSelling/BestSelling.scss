@@ -88,6 +88,14 @@
         background-color: $mint;
         z-index: 99;
         transition: all 1s ease-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__wrapper {
+            display: flex;
+            gap: 0.8rem;
+        }
 
         & h4 {
             border-bottom: 1px solid $gray;

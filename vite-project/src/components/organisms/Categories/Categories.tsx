@@ -14,19 +14,19 @@ const Categories = () => {
       image: category1,
       title: "Natural Plants",
       text: "Horem ipsum dolor sit amet, consectetur adipiscing elit.",
-      link: "",
+      link: "/categories/natural",
     },
     {
       image: category2,
       title: "Plant Accessories",
       text: "Horem ipsum dolor sit amet, consectetur adipiscing elit.",
-      link: "",
+      link: "/categories/accessories",
     },
     {
       image: category3,
       title: "Artificial Plants",
       text: "Horem ipsum dolor sit amet, consectetur adipiscing elit.",
-      link: "",
+      link: "/categories/artifical",
     },
   ];
   return (

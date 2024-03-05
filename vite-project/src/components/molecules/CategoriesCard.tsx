@@ -1,3 +1,4 @@
+import { MouseEvent } from "react";
 import Button from "../atoms/Button";
 import SmallTitle from "../atoms/SmallTitle";
 import Subtitle from "../atoms/Subtitle";
@@ -17,7 +18,7 @@ const CategoriesCard = ({
   link,
   selectedIndex,
 }: CategoriesCardProps) => {
-  const handleHover = (e) => {
+  const handleHover = (e: MouseEvent<HTMLDivElement, MouseEvent>) => {
     console.log(e.target); // Logs only the hovered element. (img / p). Do I need to find a way to extract the index from here?
   };
 
@@ -32,7 +33,7 @@ const CategoriesCard = ({
       <img src={image} alt={title} />
       <SmallTitle title={title} />
       <Subtitle title={text} />
-      <Button text="Explore" color="white" />
+      <Button text="Explore" color="white" link={link} />
     </div>
   );
 };

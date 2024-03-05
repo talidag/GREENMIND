@@ -4,18 +4,17 @@ import ShowProducts from "./ShowProducts";
 import DataContext from "../../context/DataContext";
 
 const AddedToCard = () => {
-  // TO DO: If we add more than 3 items, it overflows!
   const { shoppingCart } = useContext(DataContext);
 
-  console.log(shoppingCart);
-
+  const entriesArray = Object.entries(shoppingCart);
   const cartTitle = "Just added to your cart";
+
   return (
     <div className="best__popup">
       <SmallTitle title={cartTitle.toUpperCase()} />
       <div className="best__popup__products">
-        {shoppingCart.map((product, index) => (
-          <ShowProducts key={index} {...product} />
+        {entriesArray.map((product, index) => (
+          <ShowProducts key={index} id={product[0]} qty={product[1]} />
         ))}
       </div>
       <button>VIEW CART</button>

@@ -6,7 +6,7 @@ interface ButtonProps {
 }
 
 const Button = ({ text, color, link }: ButtonProps) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <button
@@ -20,7 +20,7 @@ const Button = ({ text, color, link }: ButtonProps) => {
         border: "none",
         cursor: "pointer",
       }}
-      // onClick={() => navigate(link)}
+      onClick={() => navigate(link)}
     >
       {text}
       <img src={arrow} alt="Arrow pointing right" />

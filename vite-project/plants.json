@@ -1,19 +1,22 @@
 {
     "plants": [
       {
-        "id": "1",
+        "id": "000001",
         "name": "Natural Plants",
-        "price": 1400
+        "price": 1400,
+        "img": "https://i.ibb.co/25Jm1Q0/Frame-9.png"
       },
       {
-        "id": "2",
+        "id": "000002",
         "name": "Artificial Plants",
-        "price": 900
+        "price": 900,
+        "img": "https://i.ibb.co/jMcDpQR/Frame-8.png"
       },
       {
-        "id": "3",
-        "name": "Artificial Plants",
-        "price": 3500
+        "id": "000003",
+        "name": "Desert Plants",
+        "price": 3500,
+        "img": "https://i.ibb.co/KqLG8hG/Frame-7.png"
       }
     ]
   }
