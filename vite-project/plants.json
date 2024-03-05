@@ -1,0 +1,19 @@
+{
+    "plants": [
+      {
+        "id": "1",
+        "name": "Natural Plants",
+        "price": 1400
+      },
+      {
+        "id": "2",
+        "name": "Artificial Plants",
+        "price": 900
+      },
+      {
+        "id": "3",
+        "name": "Artificial Plants",
+        "price": 3500
+      }
+    ]
+  }

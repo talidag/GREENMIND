@@ -4,6 +4,7 @@
     display: flex;
     gap: 5.4rem;
     padding-top: 9.6rem;
+    position: relative;
 
     &__description {
         display: flex;
@@ -28,6 +29,40 @@
         gap: 0.7rem;
         align-items: start;
 
+        &:hover .cart-icon {
+            display: inline-block;
+            transition: all 0.5s;
+        }
+
+        &:hover .best__image {
+            filter: saturate(2);
+        }
+
+        & img {
+            cursor: pointer;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            align-items: start;
+        }
+
+        &__details {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            & img {
+                display: none;
+
+                &:hover {
+                    filter: invert(49%) sepia(1%) saturate(2408%) hue-rotate(324deg) brightness(103%) contrast(85%);
+                }
+            }
+        }
+
         & h5 {
             padding-top: 0.5rem;
             font-size: 1.8rem;
@@ -38,6 +73,56 @@
             color: $gray;
             font-weight: $fw-medium;
             font-size: 1.8rem;
+        }
+    }
+
+    &__popup {
+        padding: 1.2rem 2.4rem;
+        position: fixed;
+        top: 2rem;
+        right: calc((100vw - 1440px) / 2);
+        border: 2px solid $white;
+        border-radius: 2rem;
+        width: 36rem;
+        height: 20rem;
+        background-color: $mint;
+        z-index: 99;
+        transition: all 1s ease-out;
+
+        & h4 {
+            border-bottom: 1px solid $gray;
+            padding-bottom: 1rem;
+        }
+
+        &__products {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            padding: 1.2rem;
+            font-size: 1.2rem;
+        }
+
+        &__product {
+            display: flex;
+            justify-content: space-between;
+
+            & span {
+                color: $gray;
+            }
+        }
+
+        & button {
+            border: none;
+            background-color: $mint;
+            border: 1px solid $black;
+            width: 100%;
+            padding: 1.2rem 0;
+            cursor: pointer;
+            border-radius: 1rem;
+
+            &:hover {
+                font-weight: $fw-bold;
+            }
         }
     }
 }
