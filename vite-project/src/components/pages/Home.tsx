@@ -2,6 +2,7 @@ import Hero from "../organisms/Hero/Hero";
 import BestSelling from "../organisms/BestSelling/BestSelling";
 import AboutUs from "../organisms/AboutUs/AboutUs";
 import Categories from "../organisms/Categories/Categories";
+import Testimonials from "../organisms/Testimonials/Testimonials";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <BestSelling />
       <AboutUs />
       <Categories />
+      <Testimonials />
     </>
   );
 };

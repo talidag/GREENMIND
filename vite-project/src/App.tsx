@@ -1,3 +1,4 @@
+import Footer from "./components/organisms/Footer/Footer";
 import Header from "./components/organisms/Header/Header";
 import Contacts from "./components/pages/Contacts";
 import Filters from "./components/pages/Filters";
@@ -23,7 +24,7 @@ function App() {
         <Route path="/filters" element={<Filters />} />
         <Route path="*" element={<Missing />}></Route>
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
