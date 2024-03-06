@@ -10,6 +10,7 @@ import ShoppingCart from "./components/pages/ShoppingCart";
 import "./index.scss";
 import { Route, Routes } from "react-router-dom";
 import { DataProvider } from "./context/DataContext";
+import AllProducts from "./components/pages/AllProducts";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/products" element={<AllProducts />} />
           <Route path="/products/:search" element={<Products />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/order" element={<ShoppingCart />} />
