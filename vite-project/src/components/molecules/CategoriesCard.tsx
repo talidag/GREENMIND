@@ -1,4 +1,4 @@
-import { MouseEvent } from "react";
+import { useState } from "react";
 import Button from "../atoms/Button";
 import SmallTitle from "../atoms/SmallTitle";
 import Subtitle from "../atoms/Subtitle";
@@ -8,7 +8,7 @@ interface CategoriesCardProps {
   title: string;
   text: string;
   link: string;
-  selectedIndex: number;
+  index: number;
 }
 
 const CategoriesCard = ({
@@ -16,19 +16,17 @@ const CategoriesCard = ({
   title,
   text,
   link,
-  selectedIndex,
+  index,
 }: CategoriesCardProps) => {
-  const handleHover = (e: MouseEvent<HTMLDivElement, MouseEvent>) => {
-    console.log(e.target); // Logs only the hovered element. (img / p). Do I need to find a way to extract the index from here?
-  };
+  const [classN, setClassN] = useState(false);
 
   return (
     <div
       className={`categories__card ${
-        selectedIndex === 1 ? "categories__selected" : null
-        // to change here in the future with hovered element
+        classN || index == 1 ? "categories__selected" : null // to change here in the future with hovered element
       }`}
-      onMouseOver={(e) => handleHover(e)}
+      onMouseOver={() => setClassN(true)}
+      onMouseLeave={() => setClassN(false)}
     >
       <img src={image} alt={title} />
       <SmallTitle title={title} />

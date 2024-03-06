@@ -37,7 +37,7 @@ const Categories = () => {
       </div>
       <div className="categories__cards">
         {categoriesCards.map((card, index) => (
-          <CategoriesCard key={index} {...card} selectedIndex={index} />
+          <CategoriesCard key={index} {...card} index={index} />
         ))}
       </div>
     </section>
