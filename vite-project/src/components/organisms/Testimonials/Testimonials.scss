@@ -82,3 +82,12 @@
         }
     }
 }
+
+.swiper-pagination-bullet-active {
+    background-color: $black !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: $black !important;
+}
