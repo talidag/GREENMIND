@@ -24,7 +24,7 @@ function App() {
           <Route path="/order" element={<ShoppingCart />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/filters" element={<Filters />} />
-          <Route path="*" element={<Missing />}></Route>
+          <Route path="*" element={<Missing />} />
         </Routes>
         <Footer />
       </DataProvider>

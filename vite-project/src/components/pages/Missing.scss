@@ -1,0 +1,29 @@
+@import "../../scss/variables";
+
+.missing {
+    margin-top: 11.3rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__flower-img {
+        filter: brightness(1.3);
+        width: 40rem;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 16rem;
+
+        & p {
+            font-size: 1.8rem;
+
+            & span {
+                font-weight: $fw-bold;
+            }
+        }
+    }
+}
