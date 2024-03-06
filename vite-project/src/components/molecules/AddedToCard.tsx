@@ -2,9 +2,12 @@ import { useContext } from "react";
 import SmallTitle from "../atoms/SmallTitle";
 import ShowProducts from "./ShowProducts";
 import DataContext from "../../context/DataContext";
+import { useNavigate } from "react-router";
 
 const AddedToCard = () => {
   const { shoppingCart } = useContext(DataContext);
+
+  const navigate = useNavigate();
 
   const entriesArray = Object.entries(shoppingCart);
   const cartTitle = "Just added to your cart";
@@ -17,7 +20,7 @@ const AddedToCard = () => {
           <ShowProducts key={index} id={product[0]} qty={product[1]} />
         ))}
       </div>
-      <button>VIEW CART</button>
+      <button onClick={() => navigate("/order")}>VIEW CART</button>
     </div>
   );
 };
