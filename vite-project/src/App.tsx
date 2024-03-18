@@ -9,22 +9,27 @@ import Profile from "./components/pages/Profile";
 import ShoppingCart from "./components/pages/ShoppingCart";
 import "./index.scss";
 import { Route, Routes } from "react-router-dom";
+import { DataProvider } from "./context/DataContext";
+import AllProducts from "./components/pages/AllProducts";
 
 function App() {
   return (
     <div className="app">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/products/:search" element={<Products />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/order" element={<ShoppingCart />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/filters" element={<Filters />} />
-        <Route path="*" element={<Missing />}></Route>
-      </Routes>
-      <Footer />
+      <DataProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/products" element={<AllProducts />} />
+          <Route path="/products/:search" element={<Products />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/order" element={<ShoppingCart />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/filters" element={<Filters />} />
+          <Route path="*" element={<Missing />} />
+        </Routes>
+        <Footer />
+      </DataProvider>
     </div>
   );
 }

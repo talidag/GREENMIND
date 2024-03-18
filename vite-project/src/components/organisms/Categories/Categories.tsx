@@ -14,19 +14,19 @@ const Categories = () => {
       image: category1,
       title: "Natural Plants",
       text: "Horem ipsum dolor sit amet, consectetur adipiscing elit.",
-      link: "",
+      link: "/categories/natural",
     },
     {
       image: category2,
       title: "Plant Accessories",
       text: "Horem ipsum dolor sit amet, consectetur adipiscing elit.",
-      link: "",
+      link: "/categories/accessories",
     },
     {
       image: category3,
       title: "Artificial Plants",
       text: "Horem ipsum dolor sit amet, consectetur adipiscing elit.",
-      link: "",
+      link: "/categories/artifical",
     },
   ];
   return (
@@ -37,7 +37,7 @@ const Categories = () => {
       </div>
       <div className="categories__cards">
         {categoriesCards.map((card, index) => (
-          <CategoriesCard key={index} {...card} selectedIndex={index} />
+          <CategoriesCard key={index} {...card} index={index} />
         ))}
       </div>
     </section>

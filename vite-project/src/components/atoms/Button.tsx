@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import arrow from "../../assets/ArrowRight.svg";
 
 interface ButtonProps {
@@ -5,6 +6,8 @@ interface ButtonProps {
 }
 
 const Button = ({ text, color, link }: ButtonProps) => {
+  const navigate = useNavigate();
+
   return (
     <button
       style={{
@@ -17,6 +20,7 @@ const Button = ({ text, color, link }: ButtonProps) => {
         border: "none",
         cursor: "pointer",
       }}
+      onClick={() => navigate(link)}
     >
       {text}
       <img src={arrow} alt="Arrow pointing right" />

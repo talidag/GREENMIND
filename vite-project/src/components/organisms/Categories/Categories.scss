@@ -34,6 +34,13 @@
         & button {
             display: none;
         }
+
+        &:hover {
+            transition: all 0.5s linear;
+        }
+        &:not(:hover) {
+            transition: all 0.5s linear;
+        }
     }
 
     &__selected {
