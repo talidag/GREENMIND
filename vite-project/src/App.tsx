@@ -12,26 +12,37 @@ import { Route, Routes } from "react-router-dom";
 import { DataProvider } from "./context/DataContext";
 import AllProducts from "./components/pages/AllProducts";
 import SuccessPayment from "./components/pages/SuccessPayment";
+import { Auth0Provider } from "@auth0/auth0-react";
+
+const domain = import.meta.env.VITE_AUTH0_DOMAIN;
+const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
 
 function App() {
   return (
     <div className="app">
-      <DataProvider>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/products" element={<AllProducts />} />
-          <Route path="/products/:search" element={<Products />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/order" element={<ShoppingCart />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/filters" element={<Filters />} />
-          <Route path="/success" element={<SuccessPayment />} />
-          <Route path="*" element={<Missing />} />
-        </Routes>
-        <Footer />
-      </DataProvider>
+      <Auth0Provider
+        domain={domain}
+        clientId={clientId}
+        redirectUri={window.location.origin}
+      >
+        <DataProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/products" element={<AllProducts />} />
+            <Route path="/products/:search" element={<Products />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/order" element={<ShoppingCart />} />
+
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/filters" element={<Filters />} />
+            <Route path="/success" element={<SuccessPayment />} />
+            <Route path="*" element={<Missing />} />
+          </Routes>
+          <Footer />
+        </DataProvider>
+      </Auth0Provider>
     </div>
   );
 }

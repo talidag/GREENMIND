@@ -28,18 +28,15 @@
         flex-direction: column;
         gap: 0.7rem;
         align-items: start;
+        position: relative;
 
-        &:hover .cart-icon {
+        &:hover .cart__icon {
             display: inline-block;
             transition: all 0.5s;
         }
 
         &:hover .best__image {
             filter: saturate(2);
-        }
-
-        & img {
-            cursor: pointer;
         }
 
         &__wrapper {
@@ -53,13 +50,12 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
+        }
 
-            & img {
-                display: none;
-
-                &:hover {
-                    filter: invert(49%) sepia(1%) saturate(2408%) hue-rotate(324deg) brightness(103%) contrast(85%);
-                }
+        &__icon {
+            cursor: pointer;
+            &:hover {
+                filter: invert(49%) sepia(1%) saturate(2408%) hue-rotate(324deg) brightness(103%) contrast(85%);
             }
         }
 
@@ -73,6 +69,15 @@
             color: $gray;
             font-weight: $fw-medium;
             font-size: 1.8rem;
+        }
+
+        &__fav {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            cursor: pointer;
+            z-index: 3;
+            filter: invert(19%) sepia(46%) saturate(6984%) hue-rotate(341deg) brightness(80%) contrast(90%);
         }
     }
 
@@ -129,6 +134,53 @@
             &:hover {
                 font-weight: $fw-bold;
             }
+        }
+    }
+
+    &__login {
+        height: 30rem;
+        width: 50rem;
+        background-color: $mint;
+        position: fixed;
+        left: calc(100vw / 3);
+        top: 25rem;
+        z-index: 99;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        border: 2px solid $gray;
+
+        & h4 {
+            font-size: 2rem;
+            color: $black;
+            font-weight: $fw-medium;
+        }
+
+        & p {
+            font-size: 1.6rem;
+            color: $gray;
+            text-align: center;
+        }
+
+        &__continue {
+            cursor: pointer;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            top: 0;
+            right: 1.4rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        & button {
+            display: flex;
         }
     }
 }

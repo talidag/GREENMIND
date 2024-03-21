@@ -1,6 +1,10 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import cart from "../../assets/Cart.svg";
 import DataContext from "../../context/DataContext";
+import emptyHeart from "../../assets/heart-empty.svg";
+import fullHeart from "../../assets/heart-full.svg";
+import { useAuth0 } from "@auth0/auth0-react";
+import PopupLogin from "./PopupLogin";
 
 interface BestSellingCardProps {
   id: string;
@@ -14,8 +18,17 @@ type ShoppingCartType = {
 };
 
 const BestSellingCard = ({ id, name, price, img }: BestSellingCardProps) => {
-  const { setPopupVisible, shoppingCart, setShoppingCart } =
-    useContext(DataContext);
+  const {
+    setPopupVisible,
+    shoppingCart,
+    setShoppingCart,
+    likedItems,
+    setLikedItems,
+  } = useContext(DataContext);
+
+  const { isAuthenticated } = useAuth0();
+
+  const [isPopupActive, setIsPopupActive] = useState(false);
 
   // TO DO: move this a higher level
 
@@ -45,8 +58,27 @@ const BestSellingCard = ({ id, name, price, img }: BestSellingCardProps) => {
     };
   }, [shoppingCart]);
 
+  const handleLikeClick = () => {
+    if (isAuthenticated) {
+      if (likedItems.includes(id)) {
+        const filteredItems = likedItems.filter((item) => item !== id);
+        setLikedItems(filteredItems);
+      } else {
+        setLikedItems((prevItems) => [...prevItems, id]);
+      }
+    } else {
+      setIsPopupActive(true);
+    }
+  };
+
   return (
     <div className="best__card">
+      <img
+        src={`${likedItems.includes(id) ? fullHeart : emptyHeart}`}
+        alt="add to favourites"
+        onClick={handleLikeClick}
+        className="best__card__fav"
+      />
       <img src={img} alt="A plant image" className="best__image" />
       <div className="best__card__details">
         <div className="best__card__wrapper">
@@ -56,11 +88,12 @@ const BestSellingCard = ({ id, name, price, img }: BestSellingCardProps) => {
         <img
           src={cart}
           alt={`Add item ${name} to cart`}
-          className="cart-icon"
+          className="best__card__icon"
           onClick={handleImgClick}
           id={id}
         />
       </div>
+      {isPopupActive && <PopupLogin setIsPopupActive={setIsPopupActive} />}
     </div>
   );
 };
