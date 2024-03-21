@@ -14,6 +14,8 @@ interface DataContextType {
   setPopupVisible: React.Dispatch<React.SetStateAction<boolean>>;
   shoppingCart: {};
   setShoppingCart: React.Dispatch<React.SetStateAction<{}>>;
+  likedItems: string[];
+  setLikedItems: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const DataContext = createContext<DataContextType>({
@@ -22,12 +24,15 @@ const DataContext = createContext<DataContextType>({
   setPopupVisible: () => {},
   shoppingCart: [],
   setShoppingCart: () => {},
+  likedItems: [],
+  setLikedItems: () => {},
 });
 
 export const DataProvider = ({ children }: PropsWithChildren<{}>) => {
   const [plants, setPlants] = useState<PlantType[]>([]);
   const [popupVisible, setPopupVisible] = useState<boolean>(false);
   const [shoppingCart, setShoppingCart] = useState({});
+  const [likedItems, setLikedItems] = useState<string[]>([]);
 
   const { data, fetchError, isLoading } = useAxiosFetch(
     "http://localhost:3000/plants"
@@ -45,6 +50,8 @@ export const DataProvider = ({ children }: PropsWithChildren<{}>) => {
         setPopupVisible,
         shoppingCart,
         setShoppingCart,
+        likedItems,
+        setLikedItems,
       }}
     >
       {children}
