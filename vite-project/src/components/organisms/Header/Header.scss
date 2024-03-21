@@ -29,17 +29,16 @@
 
 header {
     display: flex;
-    gap: 9.6rem;
     align-items: center;
     justify-content: space-between;
-    padding-top: 4.4rem;
-    padding-bottom: 4rem;
-    position: fixed;
-    top: 1;
+    margin-right: -9.6rem;
+    margin-left: -9.6rem;
+    padding: 4.4rem 9.6rem 4rem 9.6rem;
+    position: sticky;
+    top: 0px;
     z-index: 98;
     background-color: $white;
-    width: calc(1440px - 9.6rem * 2);
-    // border-bottom: 1px solid $gray;
+    // box-shadow: 0 4px 2px -2px rgb(228, 224, 224);
 }
 
 .icons {

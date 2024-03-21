@@ -14,13 +14,23 @@ const BestSelling = () => {
   const bestSubtitle =
     "Easiest way to healthy life by buying your favorite plants";
 
+  // TO DO: Popup still appearing blank if we swap fast between card and home
+
+  // const allItems = (Object.values(shoppingCart) as number[]).reduce(
+  //   (acc, total) => acc + total,
+  //   0
+  // );
+
+  // if (allItems === 0) {
+  //   setPopupVisible(false);
+  // }
+
   return (
     <section className="best">
       <div className="best__description">
         <Title title={bestTitle} />
         <Subtitle title={bestSubtitle} />
         <Button text="See more" color="#C1DCDC" link="/products" />
-        {/* TO DO Add see more Link! */}
       </div>
       <div className="best__cards">
         {plants.map((plant) => (

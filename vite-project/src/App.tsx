@@ -11,6 +11,7 @@ import "./index.scss";
 import { Route, Routes } from "react-router-dom";
 import { DataProvider } from "./context/DataContext";
 import AllProducts from "./components/pages/AllProducts";
+import SuccessPayment from "./components/pages/SuccessPayment";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/order" element={<ShoppingCart />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/filters" element={<Filters />} />
+          <Route path="/success" element={<SuccessPayment />} />
           <Route path="*" element={<Missing />} />
         </Routes>
         <Footer />

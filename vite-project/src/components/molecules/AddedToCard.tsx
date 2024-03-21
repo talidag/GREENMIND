@@ -16,9 +16,10 @@ const AddedToCard = () => {
     <div className="best__popup">
       <SmallTitle title={cartTitle.toUpperCase()} />
       <div className="best__popup__products">
-        {entriesArray.map((product, index) => (
-          <ShowProducts key={index} id={product[0]} qty={product[1]} />
-        ))}
+        {entriesArray.map((product, index) => {
+          if (product[1] === 0) return;
+          return <ShowProducts key={index} id={product[0]} qty={product[1]} />;
+        })}
       </div>
       <button onClick={() => navigate("/order")}>VIEW CART</button>
     </div>
