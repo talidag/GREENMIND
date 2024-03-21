@@ -89,6 +89,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        border: 2px solid $mint;
 
         &__wrapper {
             display: flex;
@@ -96,8 +97,9 @@
         }
 
         & h4 {
-            border-bottom: 1px solid $gray;
+            border-bottom: 2px solid $mint;
             padding-bottom: 1rem;
+            font-weight: $fw-medium;
         }
 
         &__products {
@@ -123,7 +125,6 @@
             width: 100%;
             padding: 1.2rem 0;
             cursor: pointer;
-            border-radius: 1rem;
 
             &:hover {
                 font-weight: $fw-bold;

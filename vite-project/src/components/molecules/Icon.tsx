@@ -22,8 +22,6 @@ const Icon = ({ img, alt, link }: IconProps) => {
     );
   }
 
-  console.log(totalItemsInCart);
-
   const location = useLocation();
 
   return (
