@@ -1,11 +1,11 @@
 import "./Hero.scss";
-import plant from "../../../assets/plant_hero.svg";
-import form from "../../../assets/form_hero.svg";
-import downArrow from "../../../assets/arrow_down.svg";
-import rightArrow from "../../../assets/arrow_right.svg";
-import SpecificationCard from "../../molecules/SpecificationCard";
-import SearchBox from "../../molecules/SearchBox";
-import HeroImg from "../../atoms/HeroImg";
+import plant from "../../../../assets/plant_hero.svg";
+import form from "../../../../assets/form_hero.svg";
+import downArrow from "../../../../assets/arrow_down.svg";
+import rightArrow from "../../../../assets/arrow_right.svg";
+import SpecificationCard from "../../../molecules/Hero/SpecificationCard";
+import SearchBox from "../../../molecules/Hero/SearchBox";
+import Image from "../../../atoms/Image";
 
 const Hero = () => {
   const title = "Buy your dream plants";
@@ -57,7 +57,7 @@ const Hero = () => {
       </div>
       <div className="hero__right">
         {heroImg.map((img, index) => (
-          <HeroImg key={index} {...img} />
+          <Image key={index} {...img} />
         ))}
       </div>
     </main>

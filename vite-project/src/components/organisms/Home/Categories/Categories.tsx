@@ -1,10 +1,10 @@
-import Subtitle from "../../atoms/Subtitle";
-import Title from "../../atoms/Title";
+import Subtitle from "../../../atoms/Subtitle";
+import Title from "../../../atoms/Title";
 import "./Categories.scss";
-import category1 from "../../../assets/category1.png";
-import category2 from "../../../assets/category2.png";
-import category3 from "../../../assets/category3.png";
-import CategoriesCard from "../../molecules/CategoriesCard";
+import category1 from "../../../../assets/category1.png";
+import category2 from "../../../../assets/category2.png";
+import category3 from "../../../../assets/category3.png";
+import CategoriesCard from "../../../molecules/CategoriesCard";
 
 const Categories = () => {
   const categoriesTitle = "Categories";

@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import cart from "../../assets/Cart.svg";
-import DataContext from "../../context/DataContext";
-import emptyHeart from "../../assets/heart-empty.svg";
-import fullHeart from "../../assets/heart-full.svg";
+import cart from "../../../assets/Cart.svg";
+import DataContext from "../../../context/DataContext";
+import emptyHeart from "../../../assets/heart-empty.svg";
+import fullHeart from "../../../assets/heart-full.svg";
 import { useAuth0 } from "@auth0/auth0-react";
 import PopupLogin from "./PopupLogin";
 
@@ -57,6 +57,8 @@ const BestSellingCard = ({ id, name, price, img }: BestSellingCardProps) => {
       clearTimeout(timer1);
     };
   }, [shoppingCart]);
+
+  // TO DO: Popup still appearing blank if we swap fast between card and home
 
   const handleLikeClick = () => {
     if (isAuthenticated) {

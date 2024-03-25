@@ -1,9 +1,9 @@
-import Title from "../../atoms/Title";
+import Title from "../../../atoms/Title";
 import "./Testimonials.scss";
-import testimonial1 from "../../../assets/testimonial1.png";
-import testimonial2 from "../../../assets/testimonial2.png";
-import slider from "../../../assets/slider.svg";
-import TestimonialsCard from "../../molecules/TestimonialsCard";
+import testimonial1 from "../../../../assets/testimonial1.png";
+import testimonial2 from "../../../../assets/testimonial2.png";
+import slider from "../../../../assets/slider.svg";
+import TestimonialsCard from "../../../molecules/TestimonialsCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";

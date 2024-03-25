@@ -1,11 +1,11 @@
-interface HeroImgProps {
+interface ImageProps {
   img: string;
   alt: string;
   className: string;
 }
 
-const HeroImg = ({ img, alt, className }: HeroImgProps) => {
+const Image = ({ img, alt, className }: ImageProps) => {
   return <img src={img} alt={alt} className={className} />;
 };
 
-export default HeroImg;
+export default Image;

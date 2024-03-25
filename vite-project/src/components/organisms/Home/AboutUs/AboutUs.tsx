@@ -1,10 +1,10 @@
 import "./AboutUs.scss";
-import AboutUsCard from "../../molecules/AboutUsCard";
-import flower from "../../../assets/flower.svg";
-import box from "../../../assets/box.svg";
-import phone from "../../../assets/phone.svg";
-import Title from "../../atoms/Title";
-import Subtitle from "../../atoms/Subtitle";
+import AboutUsCard from "../../../molecules/AboutUsCard";
+import flower from "../../../../assets/flower.svg";
+import box from "../../../../assets/box.svg";
+import phone from "../../../../assets/phone.svg";
+import Title from "../../../atoms/Title";
+import Subtitle from "../../../atoms/Subtitle";
 
 const AboutUs = () => {
   const aboutTitle = "About Us";

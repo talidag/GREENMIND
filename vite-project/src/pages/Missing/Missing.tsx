@@ -1,8 +1,8 @@
 import "./Missing.scss";
 import left from "../../assets/left-missing (1).jpg";
 import right from "../../assets/right-missing (1).jpg";
-import Title from "../atoms/Title";
-import Subtitle from "../atoms/Subtitle";
+import Title from "../../components/atoms/Title";
+import Subtitle from "../../components/atoms/Subtitle";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
