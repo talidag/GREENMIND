@@ -1,11 +1,11 @@
 import "./BestSelling.scss";
 import { useContext } from "react";
-import Subtitle from "../../atoms/Subtitle";
-import Title from "../../atoms/Title";
-import Button from "../../atoms/Button";
-import BestSellingCard from "../../molecules/BestSellingCard";
-import AddedToCard from "../../molecules/AddedToCard";
-import DataContext from "../../../context/DataContext";
+import Subtitle from "../../../atoms/Subtitle";
+import Title from "../../../atoms/Title";
+import Button from "../../../atoms/Button";
+import BestSellingCard from "../../../molecules/BestSelling/BestSellingCard";
+import AddedToCard from "../../../molecules/BestSelling/AddedToCard";
+import DataContext from "../../../../context/DataContext";
 
 const BestSelling = () => {
   const { plants, popupVisible } = useContext(DataContext);
@@ -13,17 +13,6 @@ const BestSelling = () => {
   const bestTitle = "Best Selling Plants";
   const bestSubtitle =
     "Easiest way to healthy life by buying your favorite plants";
-
-  // TO DO: Popup still appearing blank if we swap fast between card and home
-
-  // const allItems = (Object.values(shoppingCart) as number[]).reduce(
-  //   (acc, total) => acc + total,
-  //   0
-  // );
-
-  // if (allItems === 0) {
-  //   setPopupVisible(false);
-  // }
 
   return (
     <section className="best">

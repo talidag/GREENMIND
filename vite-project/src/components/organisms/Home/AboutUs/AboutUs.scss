@@ -1,4 +1,4 @@
-@import "../../../scss/variables";
+@import "../../../../scss/variables";
 
 .about {
     padding-top: 11.3rem;
@@ -23,11 +23,6 @@
         align-items: center;
         gap: 1.2rem;
         width: 40rem;
-
-        &:hover .about__card__img-wrapper {
-            border-radius: 0;
-            transition: all 0.5s ease-in-out;
-        }
 
         &__img-wrapper {
             padding: 2.8rem;

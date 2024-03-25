@@ -1,6 +1,6 @@
 import "./SuccessPayment.scss";
 import check from "../../assets/check.svg";
-import Button from "../atoms/Button";
+import Button from "../../components/atoms/Button";
 import { useContext } from "react";
 import DataContext from "../../context/DataContext";
 

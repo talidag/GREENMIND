@@ -1,5 +1,5 @@
 import { useState } from "react";
-import search from "../../assets/Search.svg";
+import search from "../../../assets/Search.svg";
 import { useNavigate } from "react-router";
 
 const SearchBox = () => {

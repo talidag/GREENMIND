@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import SmallTitle from "../atoms/SmallTitle";
-import ShowProducts from "./ShowProducts";
-import DataContext from "../../context/DataContext";
+import SmallTitle from "../../atoms/SmallTitle";
+import ShowProducts from "../ShowProducts";
+import DataContext from "../../../context/DataContext";
 import { useNavigate } from "react-router";
 
 const AddedToCard = () => {

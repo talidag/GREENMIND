@@ -1,9 +1,9 @@
 import "./ShoppingCart.scss";
 import { useContext } from "react";
 import DataContext from "../../context/DataContext";
-import ShoppingCartItem from "../molecules/ShoppingCartItem";
-import CartSummary from "../molecules/CartSummary";
-import cart from "../../assets/cart.svg";
+import ShoppingCartItem from "../../components/molecules/ShoppingCartItem";
+import CartSummary from "../../components/molecules/CartSummary";
+import cart from "./../../assets/cart.svg";
 import { useNavigate } from "react-router";
 
 const ShoppingCart = () => {
