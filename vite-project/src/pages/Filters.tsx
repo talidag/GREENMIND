@@ -1,5 +1,7 @@
+import UnderConstruction from "./UnderConstruction";
+
 const Filters = () => {
-  return <div>Filters</div>;
+  return <UnderConstruction />;
 };
 
 export default Filters;

@@ -1,5 +1,7 @@
+import UnderConstruction from "./UnderConstruction";
+
 const Products = () => {
-  return <div>Products</div>;
+  return <UnderConstruction />;
 };
 
 export default Products;

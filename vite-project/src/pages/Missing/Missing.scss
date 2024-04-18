@@ -1,13 +1,19 @@
 @import "../../scss/variables";
 
 .missing {
-    margin-top: 11.3rem;
+    // margin-top: 11.3rem;
     display: flex;
     justify-content: space-between;
 
     &__flower-img {
         filter: brightness(1.3);
         width: 40rem;
+    }
+
+    &__construction {
+        height: 15rem;
+        margin-top: 5rem;
+        filter: grayscale(78%);
     }
 
     &__text {
