@@ -4,10 +4,10 @@ import fullHeart from "../../assets/heart-full.svg";
 import cart from "../../assets/Cart.svg";
 
 interface BestSellingCardProps {
-  id: string;
-  name: string;
-  price: number;
-  img: string;
+  id?: string;
+  name?: string;
+  price?: number;
+  img?: string;
 }
 
 type ShoppingCartType = {

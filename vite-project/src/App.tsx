@@ -23,7 +23,7 @@ function App() {
       <Auth0Provider
         domain={domain}
         clientId={clientId}
-        redirectUri={"http://localhost:5173/profile"}
+        authorizationParams={{ redirect_uri: "http://localhost:5173/profile" }}
       >
         <DataProvider>
           <Header />

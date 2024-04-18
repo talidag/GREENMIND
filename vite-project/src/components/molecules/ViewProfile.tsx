@@ -3,13 +3,6 @@ import { useContext } from "react";
 import DataContext from "../../context/DataContext";
 import FavouritesCard from "./FavouritesCard";
 
-interface BestSellingCardProps {
-  id: string;
-  name: string;
-  price: number;
-  img: string;
-}
-
 const ViewProfile = () => {
   const { user, isAuthenticated } = useAuth0();
 

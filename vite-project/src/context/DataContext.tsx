@@ -34,9 +34,7 @@ export const DataProvider = ({ children }: PropsWithChildren<{}>) => {
   const [shoppingCart, setShoppingCart] = useState({});
   const [likedItems, setLikedItems] = useState<string[]>([]);
 
-  const { data, fetchError, isLoading } = useAxiosFetch(
-    "http://localhost:3000/plants"
-  );
+  const { data } = useAxiosFetch("http://localhost:3000/plants");
 
   useEffect(() => {
     setPlants(data);
