@@ -1,5 +1,5 @@
-import { PropsWithChildren, createContext, useEffect, useState } from "react";
-import useAxiosFetch from "../hooks/useAxiosFetch";
+import { PropsWithChildren, createContext, useState } from "react";
+// import useAxiosFetch from "../hooks/useAxiosFetch";
 
 interface PlantType {
   id: string;
@@ -29,16 +29,36 @@ const DataContext = createContext<DataContextType>({
 });
 
 export const DataProvider = ({ children }: PropsWithChildren<{}>) => {
-  const [plants, setPlants] = useState<PlantType[]>([]);
+  const plants = [
+    {
+      id: "000001",
+      name: "Natural Plants",
+      price: 1400,
+      img: "https://i.ibb.co/25Jm1Q0/Frame-9.png",
+    },
+    {
+      id: "000002",
+      name: "Artificial Plants",
+      price: 900,
+      img: "https://i.ibb.co/jMcDpQR/Frame-8.png",
+    },
+    {
+      id: "000003",
+      name: "Desert Plants",
+      price: 3500,
+      img: "https://i.ibb.co/KqLG8hG/Frame-7.png",
+    },
+  ];
+  // const [plants, setPlants] = useState<PlantType[]>();
   const [popupVisible, setPopupVisible] = useState<boolean>(false);
   const [shoppingCart, setShoppingCart] = useState({});
   const [likedItems, setLikedItems] = useState<string[]>([]);
 
-  const { data } = useAxiosFetch("http://localhost:3000/plants");
+  // const { data } = useAxiosFetch("http://localhost:3000/plants");
 
-  useEffect(() => {
-    setPlants(data);
-  }, [data]);
+  // useEffect(() => {
+  //   setPlants(data);
+  // }, [data]);
 
   return (
     <DataContext.Provider
